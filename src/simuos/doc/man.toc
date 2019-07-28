@@ -1,0 +1,6 @@
+\babel@toc {brazil}{}
+\contentsline {section}{\numberline {1}Introdu\~A\IeC {\S }\~A\IeC {\pounds }o}{3}
+\contentsline {section}{\numberline {2}Itens}{3}
+\contentsline {section}{\numberline {3}Equa\~A\IeC {\S }\~A\mu es e caracteres matem\~A\IeC {\textexclamdown }ticos}{3}
+\contentsline {section}{\numberline {4}Tabela}{4}
+\contentsline {section}{\numberline {5}Figuras}{4}

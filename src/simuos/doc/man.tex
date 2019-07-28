@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{graphicx}
+%encoding
+%--------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%--------------------------------------
+ 
+%Portuguese-specific commands
+%--------------------------------------
+\usepackage[portuguese]{babel}
+%--------------------------------------
+
+\begin{document}
+
+\title{SO.EDU MANUAL}
+%\author{Author's Name}
+
+\maketitle
+
+\section{Arquitetura do Sistema}
+   Definição, arquitetura e limitações do Sistema:
+   \begin{itemize}
+	\item Cada página tem tamanho de 4k
+  	\item A RAM tem 200k de memória
+   	\item Número máximo de processos 15 (para melhor visualização)
+   	\item Cada processo pode ter até 10 páginas
+   	\item A SWAP é o dobro da RAM 
+   	\item Sistema de paginação antecipada 
+   	\item Todas as páginas do processo em execução devem estar na RAM
+\end{itemize}
+
+\section{Algoritmos}
+\subsection{Algoritmos de Escalonamento}
+\begin{itemize}
+	\item FIFO (\textit{First In First Out})
+	\item RR (\textit{Round Robin})
+	\item SJF (\textit{Shortest Job First})
+	\item EDF (\textit{Earliest Deadline First})
+\end{itemize}
+
+\subsection{Algorítimos de Substituição de Páginas}
+\begin{itemize}
+	\item FIFO (\textit{First In First Out})
+	\item LRU (\textit{Least Recently Used})
+\end{itemize}
+
+\section{Cenários de Teste}
+\begin{table}[!htbp]
+\centering
+\caption{Escalonamento FIFO e substituição de página FIFO}
+\label{undefined}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+PID & Tempo de Chegada & Tempo de Execução & Número de Páginas & Deadline \\ \hline
+   1&    1&    2&    10& 0\\ \hline
+   2&    1&   2&    10& 0\\ \hline
+   3&    1&   2&    10& 0	\\ \hline
+   4&    1&   2&    10& 0	\\ \hline
+   5&    1&   2&    10& 0	\\ \hline
+   6&    1&   1&    10& 0\\ \hline
+   7&    1&   1&    10& 0\\ \hline
+   8&    1&   1&    10& 0\\ \hline
+   9&    1&   1&    10& 0\\ \hline
+   10&   1&  1&    10& 0\\ \hline
+\end{tabular}
+\end{table}
+%
+\begin{table}[!htbp]
+\centering
+\caption{Escalonamento RR e substituição de página LRU}
+\label{undefined}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+PID & Tempo de Chegada & Tempo de Execução & Número de Páginas & Deadline \\ \hline
+   1&     2& 4&    10& 0\\ \hline
+   2&    2& 4&    10& 0\\ \hline
+   3&    11&   4&    10& 0	\\ \hline
+   4&    11&   4&    10& 0	\\ \hline
+   5&    11&   2&    10& 0	\\ \hline
+   6&    11&   2&    10& 0	\\ \hline
+\end{tabular}
+\end{table}
+%		
+\begin{table}[!htbp]
+\centering
+\caption{Escalonamento SJF e substituição de página FIFO}
+\label{undefined}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+PID & Tempo de Chegada & Tempo de Execução & Número de Páginas & Deadline \\ \hline
+   1&    1&    1&    10& 0\\ \hline
+   2&    1&   2&    10& 0\\ \hline
+   3&    1&   3&    10& 0	\\ \hline
+   4&    1&   4&    10& 0	\\ \hline
+   5&    1&   20&    10& 0	\\ \hline
+   6&    10&   2&    10& 0	\\ \hline 	
+\end{tabular}
+\end{table}
+%
+\begin{table}[!htbp]
+\centering
+\caption{Escalonamento EDF e substituição de página FIFO}
+\label{undefined}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+PID & Tempo de Chegada & Tempo de Execução & Número de Páginas & Deadline \\ \hline
+   1&    1&    4&    1& 15\\ \hline
+   2&    2&   6&    1& 10\\ \hline
+   3&    3&   3&    1& 7	\\ \hline
+   4&    4&   1&    1& 3\\ \hline
+   5&    5&   1&    1& 2	\\ \hline
+\end{tabular}
+\end{table}
+	
+%\begin{figure}
+%  \centering
+%    \includegraphics[width=3.0in]{myfigure}
+%    \caption{Simulation Results}
+%    \label{simulationfigure}
+%\end{figure}
+
+\end{document}

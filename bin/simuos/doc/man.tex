@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{graphicx}
+%encoding
+%--------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%--------------------------------------
+ 
+%Portuguese-specific commands
+%--------------------------------------
+\usepackage[portuguese]{babel}
+%--------------------------------------
+
+\begin{document}
+
+\title{SO.EDU MANUAL}
+%\author{Author's Name}
+
+\maketitle
+
+%\begin{abstract}
+%This is abstract text: This simple document shows very basic features of
+%\LaTeX{}.
+%\end{abstract}
+
+\section{Cenários de Teste}
+
+%\begin{equation}
+%    \label{simple_equation}
+%    \alpha = \sqrt{ \beta }
+%\end{equation}
+
+\subsection{Algoritmos de Escalonamento}
+
+\begin{itemize}
+	\item FIFO (\textit{First In First Out})
+	\item RR (\textit{Round Robin})
+	\item SJF (\textit{Shortest Job First})
+	\item EDF (\textit{Earliest Deadline First})
+\end{itemize}
+
+\subsection{Algorítimos de Substituição de Páginas}
+
+\begin{itemize}
+	\item FIFO
+		\begin{table}[!htbp]
+		\centering
+		\label{undefined}
+		\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		PID & Tempo de Chegada & Tempo de Execução & Número de Páginas & Deadline \\ \hline
+   		1&    1&    4&    10& 0\\ \hline
+   		2&    4&   4&    10& 0\\ \hline
+   		3&    5&   4&    10& 0	\\ \hline
+   		4&    8&   4&    10& 0	\\ \hline
+   		5&    8&   2&    10& 0	\\ \hline
+   		6&    10&   2&    10& 0\\ \hline
+   		7&    11&   2&    10& 0\\ \hline
+   		8&    15&   2&    10& 0\\ \hline
+   		9&    16&   2&    10& 0\\ \hline
+   		10&   20&   2&   10& 0\\ \hline
+		\end{tabular}
+		\end{table}
+
+	\item LRU	
+		\begin{table}[!htbp]
+		\centering
+		\label{undefined}
+		\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		PID & Tempo de Chegada & Tempo de Execução & Número de Páginas & Deadline \\ \hline
+   		1&     2& 4&    10& 0\\ \hline
+   		2&    2& 4&    10& 0\\ \hline
+   		3&    10&   4&    10& 0	\\ \hline
+   		4&    10&   4&    10& 0	\\ \hline
+   		5&    10&   2&    10& 0	\\ \hline
+   		6&    10&   2&    10& 0	\\ \hline
+		\end{tabular}
+		\end{table}
+\end{itemize}
+%\begin{figure}
+%  \centering
+%    \includegraphics[width=3.0in]{myfigure}
+%    \caption{Simulation Results}
+%    \label{simulationfigure}
+%\end{figure}
+
+\end{document}
